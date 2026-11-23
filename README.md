@@ -2,7 +2,7 @@
 
 Bluetooth Priority is a Windows system tray app for choosing your preferred headphones, speakers and microphone, adjusting their volume, and managing paired Bluetooth audio connections. Put your headset before your desk speakers to switch back to the headset automatically when it reconnects.
 
-**[Download Bluetooth Priority 1.1.11 for Windows x64 (portable ZIP)](https://github.com/istvanvass982-tech/Bluetooth-Priority/releases/download/v1.1.11/BluetoothPriority-1.1.11-portable-win-x64.zip)** · [Release notes and checksum](https://github.com/istvanvass982-tech/Bluetooth-Priority/releases/tag/v1.1.11)
+**[Download Bluetooth Priority 1.1.14 for Windows x64 (portable ZIP)](https://github.com/istvanvass982-tech/Bluetooth-Priority/releases/download/v1.1.14/BluetoothPriority-1.1.14-portable-win-x64.zip)** · [Release notes and checksum](https://github.com/istvanvass982-tech/Bluetooth-Priority/releases/tag/v1.1.14)
 
 Saved you a trip to Windows sound settings? [☕ Buy me a coffee](https://ko-fi.com/istvanv) · [Tip via PayPal](https://paypal.me/foliazo)
 
@@ -28,6 +28,20 @@ The main **Bluetooth Priority** view is the editable playback priority list. It 
 - Optional **Switch notifications** report successful playback changes.
 
 The **All audio outputs** view shows currently available outputs in a compact list with Bluetooth devices first in their saved priority order, followed by other outputs ranked by observed playback use. This view does not rewrite your saved priority order. Click a device to pin or unpin it just as in the main view.
+
+### Panel designs
+
+Open **Settings → Panel design** to switch immediately. **Quiet Panel** uses labeled tabs above the current device. **Cove** uses a narrower panel, rounded device rows and a bottom navigation bar. **Classic** is the default and keeps the compact volume-first layout. Existing style selections are preserved. The tray menu and its submenus follow the Windows taskbar color mode, including high contrast. The separate **Theme** setting chooses system, light or dark appearance. All three designs use the same audio controls, shortcuts and priority settings.
+
+A short trace follows a change in the audio endpoint while the panel is open. It stops after 300 ms. The volume overlay also follows the selected design.
+
+### Output rules and feedback
+
+- On either playback page, **If disconnected** shows which eligible output Bluetooth Priority would choose if the current device and its associated endpoints disappeared. The prediction uses the current device inventory. It is hidden while switching is paused.
+- In **All audio outputs**, open the **⋯** menu beside a device and select **Manual only** to exclude it from automatic selection, including fallback. You can still select and pin it explicitly or cycle to it using the next-output shortcut. Open the same menu to undo the rule.
+- The volume overlay eases to the new value and briefly highlights an output change. The Connections page gives confirmed changes a single subtle pulse. Windows reduced-motion and high-contrast settings suppress these effects.
+
+The distinction between manual selection and automatic eligibility was inspired by [Audio Priority Bar](https://github.com/camguillory/Audio-Priority-Bar).
 
 ## Microphones and recording inputs
 
